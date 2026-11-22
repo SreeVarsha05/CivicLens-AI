@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CivicLens AI · Government Policy Intelligence</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/i18n.js"></script>
+</head>
+<body class="dashboard-body">
+  <div class="app-layout">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <a class="brand" href="/" aria-label="CivicLens AI home">
+          <div class="brand-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              <circle cx="12" cy="11" r="3"/>
+            </svg>
+          </div>
+          <div class="brand-text">
+            <span class="brand-title" data-i18n="brand.title">CivicLens AI</span>
+            <span class="brand-subtitle" data-i18n="brand.subtitle">Policy Intelligence</span>
+          </div>
+        </a>
+      </div>
+
+      <nav class="sidebar-nav">
+        <div class="nav-group-title" data-i18n="nav.workspace">WORKSPACE</div>
+        <a href="#overview" class="nav-item active" data-nav="overview">
+          <svg class="nav-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="7" height="7"></rect>
+            <rect x="14" y="3" width="7" height="7"></rect>
+            <rect x="14" y="14" width="7" height="7"></rect>
+            <rect x="3" y="14" width="7" height="7"></rect>
+          </svg>
+          <span data-i18n="nav.dashboard">Dashboard</span>
+        </a>
+        <a href="#compare-section" class="nav-item" data-nav="compare">
+          <svg class="nav-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/>
+          </svg>
+          <span data-i18n="nav.compare">Compare Documents</span>
+        </a>
+        <a href="#changes-section" class="nav-item" data-nav="changes">
+          <svg class="nav-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="16" y1="13" x2="8" y2="13"></line>
+            <line x1="16" y1="17" x2="8" y2="17"></line>
+            <polyline points="10 9 9 9 8 9"></polyline>
+          </svg>
+          <span data-i18n="nav.changes">Policy Changes & Priority</span>
+        </a>
+        <div class="nav-group-title" data-i18n="nav.settings_group">SETTINGS</div>
+        <a href="#system-settings" class="nav-item" data-nav="settings">
+          <svg class="nav-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="3"></circle>
+            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+          </svg>
+          <span data-i18n="nav.settings">Provider & Settings</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="trust-badge">
+          <div class="trust-badge-dot"></div>
+          <div class="trust-badge-text">
+            <strong data-i18n="trust.badge_title">Evidence First</strong>
+            <small data-i18n="trust.badge_sub">Official Gazette Grounded</small>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <div class="main-wrapper">
+      <!-- Topbar Header -->
+      <header class="top-header">
+        <div class="header-left">
+          <button id="sidebar-toggle" class="sidebar-toggle" aria-label="Toggle navigation sidebar">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+          <div class="header-breadcrumb">
+            <span class="breadcrumb-app" data-i18n="brand.title">CivicLens AI</span>
+            <span class="breadcrumb-separator">/</span>
+            <span class="breadcrumb-current" data-i18n="header.breadcrumb_current">Document Intelligence Workspace</span>
+          </div>
+        </div>
+        <div class="header-right">
+          <!-- Global Persistent Language Selector -->
+          <div class="lang-selector-wrapper" title="Change Language / భాషను మార్చండి">
+            <svg class="lang-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+            <select id="lang-select" class="lang-select" aria-label="Select Language" onchange="setLanguage(this.value)">
+              <option value="en">English</option>
+              <option value="te">తెలుగు (Telugu)</option>
+              <option value="hi">हिन्दी (Hindi)</option>
+              <option value="ta">தமிழ் (Tamil)</option>
+              <option value="kn">ಕನ್ನಡ (Kannada)</option>
+              <option value="ml">മലയാളം (Malayalam)</option>
+              <option value="mr">मराठी (Marathi)</option>
+              <option value="bn">বাংলা (Bengali)</option>
+              <option value="gu">ગુજરાતી (Gujarati)</option>
+              <option value="pa">ਪੰਜਾਬੀ (Punjabi)</option>
+              <option value="or">ଓଡ଼ିଆ (Odia)</option>
+              <option value="ur">اردو (Urdu)</option>
+            </select>
+          </div>
+          <div class="header-status-pill">
+            <span class="pulse-indicator"></span>
+            <span id="status" role="status" aria-live="polite" data-i18n="header.status_loading_samples">Loading official sample documents…</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- AI Offline Banner (shown by app.js when AI is unavailable) -->
+      <div id="ai-offline-banner" class="ai-offline-banner" hidden role="alert" aria-live="polite">
+        <div class="ai-offline-banner-inner">
+          <svg class="ai-offline-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+          <span>
+            <strong data-i18n="banner.ai_unavailable">AI analysis temporarily unavailable.</strong>
+            <span id="ai-offline-detail" data-i18n="banner.ai_offline_detail"> Document comparison, source verification, evidence highlights and all filters remain fully available.</span>
+          </span>
+          <button type="button" class="ai-offline-dismiss" aria-label="Dismiss AI status notice" onclick="document.getElementById('ai-offline-banner').hidden=true">✕</button>
+        </div>
+      </div>
+
+      <!-- Scrollable Main Content -->
+      <main class="dashboard-main">
+        <!-- Hero Section -->
+        <section class="hero-banner" id="overview">
+          <div class="hero-content">
+            <div class="hero-tag">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <span data-i18n="hero.tag">GOVERNMENT POLICY AUDIT & INTELLIGENCE</span>
+            </div>
+            <h1 class="hero-title" data-i18n="hero.title">Clarity, with the source right beside it.</h1>
+            <p class="hero-desc" data-i18n="hero.desc">Audit differences between official Gazette notifications, circulars, and amendments. Every detected addition, removal, and modification is verified against cited PDF page text.</p>
+          </div>
+        </section>
+
+        <!-- Document Compare Controls Section -->
+        <section class="section-container" id="compare-section">
+          <div class="section-header">
+            <div>
+              <h2 class="section-title" data-i18n="compare.title">Compare Policy Documents</h2>
+              <p class="section-subtitle" data-i18n="compare.subtitle">Select pre-loaded official notifications or upload your own PDF versions for side-by-side verification.</p>
+            </div>
+          </div>
+
+          <div class="compare-grid">
+            <!-- Sample Gazette Card -->
+            <div class="card compare-card">
+              <div class="card-header">
+                <div class="card-header-icon blue">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                </div>
+                <div>
+                  <h3 class="card-title" data-i18n="compare.samples_card_title">Official Gazette Samples</h3>
+                  <p class="card-desc" data-i18n="compare.samples_card_desc">Compare verified Ministry of Finance CGFMU Gazette copies</p>
+                </div>
+              </div>
+              <div class="toolbar-body">
+                <div class="selectors-wrapper">
+                  <div class="selector-field">
+                    <label for="old-doc" data-i18n="compare.earlier_label">EARLIER GAZETTE NOTIFICATION</label>
+                    <div class="select-wrapper">
+                      <select id="old-doc"></select>
+                    </div>
+                  </div>
+                  <div class="selector-arrow" aria-hidden="true">→</div>
+                  <div class="selector-field">
+                    <label for="new-doc" data-i18n="compare.updated_label">UPDATED GAZETTE NOTIFICATION</label>
+                    <div class="select-wrapper">
+                      <select id="new-doc"></select>
+                    </div>
+                  </div>
+                </div>
+                <button id="compare" class="btn btn-primary btn-block" data-i18n="compare.btn_sample">Compare Sample Gazette</button>
+              </div>
+            </div>
+
+            <!-- Custom PDF Upload Card -->
+            <div class="card compare-card">
+              <div class="card-header">
+                <div class="card-header-icon navy">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+                </div>
+                <div>
+                  <div class="card-header-with-badge">
+                    <h3 class="card-title" data-i18n="compare.upload_card_title">Upload Custom PDFs</h3>
+                    <span class="badge-neutral" data-i18n="compare.upload_badge">PDF · Max 16 MB each</span>
+                  </div>
+                  <p class="card-desc" data-i18n="compare.upload_card_desc">Upload an earlier policy document and its revised amendment</p>
+                </div>
+              </div>
+              <form id="upload-form" class="upload-form-body">
+                <div class="upload-drop-grid">
+                  <label class="dropzone-label">
+                    <span class="dropzone-title" data-i18n="compare.dropzone_earlier_title">EARLIER POLICY PDF</span>
+                    <div class="dropzone-box">
+                      <svg class="dropzone-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+                      <span class="dropzone-prompt" data-i18n="compare.dropzone_earlier_prompt">Choose earlier PDF file</span>
+                      <input type="file" name="earlier_pdf" accept="application/pdf,.pdf" required class="file-input">
+                    </div>
+                  </label>
+                  <label class="dropzone-label">
+                    <span class="dropzone-title" data-i18n="compare.dropzone_updated_title">UPDATED POLICY PDF</span>
+                    <div class="dropzone-box">
+                      <svg class="dropzone-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+                      <span class="dropzone-prompt" data-i18n="compare.dropzone_updated_prompt">Choose updated PDF file</span>
+                      <input type="file" name="updated_pdf" accept="application/pdf,.pdf" required class="file-input">
+                    </div>
+                  </label>
+                </div>
+                <button id="upload-compare" type="submit" class="btn btn-navy btn-block" data-i18n="compare.btn_upload">Compare Uploaded PDFs</button>
+                <p class="upload-privacy" data-i18n="compare.privacy_notice">
+                  PDFs are extracted in memory. If AI is enabled, verified excerpts are sent for explanations. Uploaded links expire on restart.
+                </p>
+                <p class="session-memory-notice">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                  <strong data-i18n="compare.session_notice_strong">Session notice:</strong> <span data-i18n="compare.session_notice_text">Comparison sessions are stored in memory only. Restarting the server clears all sessions and uploaded PDFs. Text-based PDFs only — scanned image-only PDFs are not supported.</span>
+                </p>
+              </form>
+            </div>
+          </div>
+        </section>
+
+        <!-- Document Metadata Header -->
+        <section id="doc-meta" class="doc-meta-container" hidden></section>
+
+        <!-- Comparison Workspace Section -->
+        <section class="section-container" id="changes-section">
+          <div id="changes" class="changes"></div>
+        </section>
+
+        <!-- System & Provider Settings Section -->
+        <section class="section-container" id="system-settings">
+          <div class="card settings-card">
+            <div class="card-header">
+              <div class="card-header-icon blue">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+              </div>
+              <div>
+                <h3 class="card-title" data-i18n="settings.title">System & Provider Configuration</h3>
+                <p class="card-desc" data-i18n="settings.desc">Verify connectivity and server AI provider health</p>
+              </div>
+            </div>
+            <div class="settings-body">
+              <div class="provider-check-row">
+                <button id="ai-health-check" type="button" class="btn btn-outline" data-i18n="settings.btn_test">Test AI Connection</button>
+                <span id="ai-health-result" class="provider-status-text" role="status" aria-live="polite" data-i18n="settings.test_prompt_note">Checks the currently configured AI provider and model with a short test prompt.</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Method & Verification Card -->
+        <section class="method-card">
+          <div class="method-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+          </div>
+          <div class="method-text">
+            <strong data-i18n="method.title">Verification Methodology & Trust Notice</strong>
+            <p data-i18n="method.desc">Page text is extracted directly from official PDF files with PyMuPDF. Every quoted difference is strictly validated against that exact cited page before presentation. AI explanations interpret differences for accessibility but never replace the official government Gazette source.</p>
+          </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="dashboard-footer">
+          <div class="footer-left">
+            <strong data-i18n="footer.brand">CivicLens AI</strong>
+            <span data-i18n="footer.tagline">Government Policy Intelligence Platform</span>
+          </div>
+          <div class="footer-right">
+            <span data-i18n="footer.legal">Official Gazette documents remain the sole legal authority.</span>
+          </div>
+        </footer>
+      </main>
+    </div>
+  </div>
+  <script src="/app.js" defer></script>
+</body>
+</html>
