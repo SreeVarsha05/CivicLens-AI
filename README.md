@@ -176,3 +176,13 @@ In the **Environment** tab on Render, add the following variables:
 - **In-Memory Session Storage:** Document comparison sessions are maintained in an in-memory LRU cache (`MAX_DOCUMENT_SESSIONS = 100`). If the web service restarts or redeploys, active sessions clear; users simply reload or re-upload their documents.
 - **Stateless PDF Processing:** Uploaded PDFs are parsed in-memory and temporary comparison state is ephemeral, keeping the server private and leak-free.
 - **Outbound Network:** Groq API calls require outbound HTTPS access, which is enabled by default on standard Render web services.
+
+## Credits
+
+- **Python** – Backend development
+- **PyMuPDF** – PDF text extraction
+- **Groq API** – AI-powered explanations
+- **HTML, CSS & JavaScript** – Frontend development
+- **GitHub** – Version control and source code hosting
+- **Render** – Application deployment
+- **AI Development Assistance** – OpenAI Codex and other AI tools used during development
